@@ -1,0 +1,25 @@
+<div ng-controller="AdminCtrl">
+    <form>
+        <!--div class="form-group">
+           <button type="button" ng-click="reinit()" class="btn btn-info">Réinitialiser l'application</button>
+           <br/>
+        </div-->
+        
+        <div class="form-group">
+            <label for="appName">Appareil :</label>
+            <input id="appName" ng-model="appName" class="form-control" type="text" name="appName" maxlength="30" required/>
+        </div>
+        <div class="form-group">
+           <label for="telephoneNotif">Téléphone :</label>
+            <input id="telephoneNotif" ng-model="telephoneNotif" class="form-control" type="tel" name="telephoneNotif" maxlength="30" required/>
+        </div>
+        
+        
+
+        <div class="form-group">
+            <a href="#tableau-de-bord" class="pull-left btn btn-default">Retour</a>
+            <a href="#tableau-de-bord" ng-click="enregistrer()" class="pull-right btn btn-danger">Enregistrer</a>
+        </div>
+    </form>
+</div>
+

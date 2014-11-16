@@ -1,0 +1,46 @@
+<div ng-controller="ModificationCtrl">
+    <form class="form-horizontal">
+        <div class="form-group center-el">
+            <h4>{{radiateur.libelle()}}</h4>
+            <span class="label etat" ng-class="radiateur.bootCls('label-')" >{{radiateur.lblEtat()}}</span>
+        </div>
+        <div class="form-group">
+            Dernière mise en route : <strong class="">{{radiateur.dernierMiseEnRoute | date:"dd/MM/yyyy HH:mm"}}</strong>
+        </div>
+        <div class="form-group">
+            <label for="notif">Notification SMS : </label>
+            <input id="notif" ng-model="notif" class="" type="checkbox" name="notif"/>
+        </div>
+        <div class="form-group">
+            <label for="position">Puissance :</label>
+            <input id="position" ng-model="position" class="form-control" type="number" name="position" min="0" max="9" required/>
+        </div>
+
+        <div class="form-group">
+            <label class="radio-inline">
+                <input type="radio" name="etat" ng-model="etat" value="02" required/>
+                Confort
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="etat" ng-model="etat" value="03" required/>
+                Arrêt
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="etat" ng-model="etat" value="01" required/>
+                Prog.
+            </label>
+        </div>
+        
+        <div class="form-group">
+            <label for="dureeEstimee">Durée de chauffage (minutes) :</label>
+            <input type="number" class="form-control" id="dureeEstimee" ng-model="dureeEstimee" name="dureeEstimee" min="0" max="300" required />
+            <!--input id="dureeEstimee" class="form-control" type="range" ng-model="dureeEstimee" name="dureeEstimee" min="0" max="300" step="1" required /-->
+        </div>
+
+        <div class="form-group">
+            <a href="#tableau-de-bord" class="pull-left btn btn-default">Retour</a>
+            <input ng-click="submit(radiateur)" type="submit" value="Enregistrer" class="pull-right btn btn-success" />
+        </div>
+
+    </form>
+</div>

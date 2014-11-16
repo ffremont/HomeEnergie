@@ -1,0 +1,9 @@
+<div ng-controller="TableauDeBordCtrl">
+ 
+    <div ng-repeat="radiateur in radiateurs | orderBy:['-enChauffe','-position', '+etat']" class="row">
+        <div class="alert" ng-click="onClickRadiateur(radiateur.id, radiateur.enChauffe)" ng-class="radiateur.bootCls('alert-')">
+            <strong><span class="position">{{radiateur.position}}</span> {{radiateur.libelle()}}</strong> {{radiateur.duree()}}  <span class="pull-right"> {{radiateur.lblEtat()}}</span>
+        </div>
+    </div>
+</div>
+

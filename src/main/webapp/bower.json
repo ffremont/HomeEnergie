@@ -1,0 +1,9 @@
+{
+  "name": "homeEnergie",
+  "version": "0.0.1",
+  "dependencies": {
+    "angular": "1.2.x",
+    "angular-route": "1.2.x",
+    "bootstrap" : "~3.2.x"
+  }
+}

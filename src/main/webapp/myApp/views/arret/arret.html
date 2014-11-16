@@ -1,0 +1,29 @@
+<div ng-controller="ArretCtrl">
+    <form>
+        <div class="form-group center-el">
+            <h4>{{radiateur.libelle()}}</h4>
+            <span class="label label-danger">En chauffe</span>
+        </div>
+        <div class="form-group">
+            En chauffe depuis : <strong>{{radiateur.duree()}}</strong>
+        </div>
+        <div class="form-group">
+            Arrêt estimé à : <strong>{{dateFinPrevue | date:"HH:mm"}}</strong>
+        </div>
+        <div class="form-group">
+            Conso du radiateur : <span>{{radiateur.puissance}}</span> W
+        </div>
+        <div class="form-group">
+            Coût ~ : <span>{{radiateur.cout()}}</span>€
+        </div>
+        <div class="form-group">
+            <label for="position">Puissance à l'arrêt :</label>
+            <input id="position" ng-model="radiateur.position" class="form-control" type="number" name="position" min="0" max="9" required/>
+        </div>
+
+        <div class="form-group">
+            <a href="#tableau-de-bord" class="pull-left btn btn-default">Retour</a>
+            <a href="#tableau-de-bord" ng-click="arreter(radiateur)" class="pull-right btn btn-danger">Arrêter</a>
+        </div>
+    </form>
+</div>

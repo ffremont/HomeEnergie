@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:jee="http://www.springframework.org/schema/jee"
+       xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+       xmlns:task="http://www.springframework.org/schema/task"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/jee 
+  http://www.springframework.org/schema/jee/spring-jee.xsd
+  http://www.springframework.org/schema/data/mongo http://www.springframework.org/schema/data/mongo/spring-mongo-1.0.xsd
+  http://www.springframework.org/schema/context
+  http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd">
+    
+    <task:annotation-driven />
+    <context:property-placeholder location="classpath:application.properties" />
+    
+    <bean id="mongo" class="org.springframework.data.mongodb.core.MongoFactoryBean">
+        <property name="host" value="${mongo.host}"/>
+        <property name="port" value="${mongo.port}"/>
+    </bean>
+   
+    <bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
+        <constructor-arg name="mongo" ref="mongo"/>
+        <constructor-arg name="databaseName" value="${mongo.db}"/>
+    </bean>
+    
+    <bean id="webTargetFactory" class="fr.ffremont.henergie.WebTargetFactory"/>
+    <bean id="octopushClient" factory-bean="webTargetFactory" factory-method="createInstance">
+        <constructor-arg name="url" value="${octopush.url}"/>
+    </bean>
+            
+    <context:component-scan base-package="fr.ffremont.henergie" />
+</beans>

@@ -1,0 +1,67 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 10 oct. 2014, 06:14:51
+    Author     : florent
+*/
+
+[ng-click]:hover{
+    cursor: pointer;
+}
+
+.center-el{
+    text-align:center;
+}
+
+form label.radio-inline{
+    margin-right: 15px;
+}
+
+form div.form-group:last-child{
+    margin-top: 25px;
+}
+
+.navbar .navbar-text.navbar-icons .icon{
+    font-size: 25px;
+    color: white;
+}
+.navbar .navbar-text.navbar-icons{
+    margin-top: 10.5px;
+    margin-bottom: 10.5px;
+    color: white;
+}
+
+.navbar-header button{
+    margin-left: 5px;
+}
+
+div.loader{
+    background: rgb(249, 249, 249);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999999;
+    opacity: 0.3;
+}
+div.loader > img{
+    margin-left: 42%;
+    margin-top: 54%;
+}
+
+span.position{
+    border-radius: 41px;
+    border: 2px solid white;
+    padding-left: 5px;
+    width: 24px;
+    font-weight: bold;
+    height: 24px;
+    display: inline-block;
+    margin-right: 10px;
+    
+    margin-right: 10px;
+}

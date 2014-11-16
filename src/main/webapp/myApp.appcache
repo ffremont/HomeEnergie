@@ -1,0 +1,33 @@
+CACHE MANIFEST
+# v${project.version}
+
+CACHE:
+images/favicon.ico
+images/ajax-loader.gif
+index.html
+myApp.js
+css/homeEnergie.css
+bower_components/angular/angular.min.js
+bower_components/angular-route/angular-route.js
+myApp/config.js
+myApp/synchro.js
+myApp/data/store.js
+myApp/menu.js
+myApp/meteo.js
+myApp/error.js
+myApp/data/radiateur.js
+myApp/views/tableau-de-bord/tdb.js
+myApp/views/modification/modif.js
+myApp/views/arret/arret.js
+css/bootstrap.flatly.min.css
+css/Metro-UI-CSS-master/min/iconFont.min.css
+myApp/views/tableau-de-bord/tdb.html
+myApp/views/modification/modif.html
+myApp/views/arret/arret.html
+myApp/views/administration/admin.js
+myApp/views/administration/admin.html
+css/Metro-UI-CSS-master/fonts/iconFont.woff
+css/Metro-UI-CSS-master/fonts/iconFont.ttf
+
+NETWORK:
+*
